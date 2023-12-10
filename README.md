@@ -25,3 +25,6 @@ Data is from FIRMS VIIRS satellite, ERA5, ESA Worldcover 2020, and Copernicus DE
 Our evaluation metrics are F1 score and the structural similarity index measure (SSIM).
 We evaluate the wildfire prediction as a pixel-wise classification problem and then use F1 score with micro-averaging for the flattened 64x64 images as a primary success metric. Our models had higher F1 scores than ResUNet and SatUNet, and lower SSIM scores. Since the purpose of SSIM is image quality assessment and it only considers mean, variance, and covariance between images, we don't treat SSIM as a primary metric, but instead rely on it to interpret the predictions of the models.
 For both metrics, we calculate the mean and standard deviation after running the training 3 times on different splits.
+
+## Conclusion
+For our project, we implemented models predicting wildfire in a 500x500 meter region using the previous day's wildfire as well as other atmospheric and geographic data as features. We implemented a cDCGAN model, a UNet DCGAN FT model, as well as baselines SatUNet and ResUNet. We found that our models had strong F1 scores, but less strong SSIM scores relative to the baselines. We conclude that cDCGAN and UNet DCGAN FT models have potential in the field of wildfire prediction, and await further exploration of this topic.
