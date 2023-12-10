@@ -2,7 +2,7 @@
 
 Wildfire is a major environmental problem around the world.
 Wildfire prediction is necessary for early detection of fires, to control burn areas and raise community preparedness.
-Our project is to build a generative adversarial network, which would allow conditioning image generation on additional geospatial features for accurate prediction of the spread of wildfire. We use cDCGAN and cGAN-FT models.
+Our project is to build a generative adversarial network, which would allow conditioning image generation on additional geospatial features for accurate prediction of the spread of wildfire. We use cDCGAN and UNet cGAN FT models.
 
 ## cDCGAN
 Our solution, a conditional deep convolutional generative adversarial network (cDCGAN), provides freedom and accuracy in prediction.
