@@ -19,4 +19,9 @@ Our data consists of 10 features (today’s fire plus other atmospheric and geog
 Above is an example of a fire in Florida from April 2012 (the feature minimum temperature was omitted for space).
 Data is from FIRMS VIIRS satellite, ERA5, ESA Worldcover 2020, and Copernicus DEM public databases
 
+## Results
+<img width="555" alt="Screen Shot 2023-12-09 at 4 18 21 PM" src="https://github.com/amber3536/Wildfire_Prediction/assets/36279682/71a972ba-df94-4eef-a304-becd2d51d527">
 
+Our evaluation metrics are F1 score and the structural similarity index measure (SSIM).
+We evaluate the wildfire prediction as a pixel-wise classification problem and then use F1 score with micro-averaging for the flattened 64x64 images as a primary success metric. Our models had higher F1 scores than ResUNet and SatUNet, and lower SSIM scores. Since the purpose of SSIM is image quality assessment and it only considers mean, variance, and covariance between images, we don't treat SSIM as a primary metric, but instead rely on it to interpret the predictions of the models.
+For both metrics, we calculate the mean and standard deviation after running the training 3 times on different splits.
